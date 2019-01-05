@@ -17,7 +17,7 @@ var serviceSide = 'frontend'; // сторона интерфейса ('frontend'
 const config = {
     watch: ['./**/*.sass', './**/*.scss', './**/*.js'],
     sass: {
-        src: './sass/' + serviceSide + '/**/*.+sass',
+        src: './sass/' + serviceSide + '/**/*.sass',
         dest: temp_dir
     },
     css: {

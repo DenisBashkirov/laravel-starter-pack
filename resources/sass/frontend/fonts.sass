@@ -1,0 +1,18 @@
+@import "bootstrap"
+
+$folder: '../fonts'
+
+
+
+@each $font-name, $font-weight, $font-style in ('Thin', 100, normal), ('Light', 300, normal), ('Regular', normal, normal), ('Bold', bold, normal)
+  $font-family: 'RobotoSlab'
+
+  @font-face
+    font-family: $font-family + '-' + $font-name
+    font-display: fallback
+
+    src: url($folder + '/' + $font-family + '/' + $font-family + '-' + $font-name + '.eot')
+    src: url($folder + '/' + $font-family + '/' + $font-family + '-' + $font-name + '.eot?#iefix') format('embedded-opentype'), url($folder + '/' + $font-family + '/' + $font-family + '-' + $font-name + '.woff') format('woff'), url($folder + '/' + $font-family + '/' + $font-family + '-' + $font-name + '.ttf') format('truetype'), url($folder + '/' + $font-family + '/' + $font-family + '-' + $font-name + '.svg#Panton') format('svg')
+
+    font-weight: $font-weight
+    font-style: $font-style
