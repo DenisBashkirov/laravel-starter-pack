@@ -15,9 +15,9 @@ var temp_dir = './tmp/';
 var serviceSide = 'frontend'; // сторона интерфейса ('frontend' / 'backend')
 
 const config = {
-    watch: './**/*.(sass|scss|js)',
+    watch: ['./**/*.sass', './**/*.scss', './**/*.js'],
     sass: {
-        src: './sass/' + serviceSide + '/**/*.+(sass|scss)',
+        src: './sass/' + serviceSide + '/**/*.+sass',
         dest: temp_dir
     },
     css: {
