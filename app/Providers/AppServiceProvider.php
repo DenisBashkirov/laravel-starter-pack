@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Schema;
+use URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +16,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+
+        if(env('APP_ENV') != 'local')
+        {
+
+        }
     }
 
     /**
