@@ -16,7 +16,7 @@ class PagesController extends BaseController
 {
     public function __construct()
     {
-        $route_name = Route::getCurrentRoute()->getName();
+        $route_name = Route::getCurrentRoute() ? Route::getCurrentRoute()->getName() : null;
         $this->template = 'frontend.pages.' . $route_name;
     }
 }
