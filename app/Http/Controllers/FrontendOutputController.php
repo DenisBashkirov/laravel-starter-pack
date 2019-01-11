@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Route;
 use Mail;
 
-class PagesController extends BaseController
+class FrontendOutputController extends BaseController
 {
     public function __construct()
     {
